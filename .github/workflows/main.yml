@@ -33,8 +33,10 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: 'pnpm'
+          node-version: 20
+      - name: Install pnpm
+        run: npm install --global pnpm
+
       - name: Install dependencies
         run: pnpm install
       - name: Build
